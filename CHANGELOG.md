@@ -9,6 +9,13 @@ From v0.2.0 onward, this file is generated automatically by
 [release-please](https://github.com/googleapis/release-please) from
 [Conventional Commits](https://www.conventionalcommits.org/).
 
+## [0.1.1](https://github.com/devbydaniel/houston.nvim/compare/v0.1.0...v0.1.1) (2026-04-06)
+
+
+### Documentation
+
+* add screenshots and finish README ([e71db62](https://github.com/devbydaniel/houston.nvim/commit/e71db6235f03ba4fa239edbbaec2982f59d2ea0c))
+
 ## [0.1.0] - 2026-04-06
 
 Initial release.
