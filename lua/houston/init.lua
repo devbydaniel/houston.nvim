@@ -3,7 +3,7 @@
 
 local M = {}
 
-local config = require("houston.config")
+local config = require "houston.config"
 
 ---Configure houston.nvim. Optional — `:colorscheme houston` works without it.
 ---@param opts HoustonConfig?
@@ -14,16 +14,16 @@ end
 ---Load the colorscheme. Called by `colors/houston.lua`.
 function M.load()
   if vim.g.colors_name then
-    vim.cmd("hi clear")
+    vim.cmd "hi clear"
   end
-  if vim.fn.exists("syntax_on") then
-    vim.cmd("syntax reset")
+  if vim.fn.exists "syntax_on" then
+    vim.cmd "syntax reset"
   end
 
   vim.o.termguicolors = true
   vim.g.colors_name = "houston"
 
-  local palette = require("houston.palette")
+  local palette = require "houston.palette"
   local opts = config.options
 
   -- Allow palette overrides
@@ -83,16 +83,16 @@ end
 function M._set_terminal_colors(palette)
   local t = palette.term
   local map = {
-    [0]  = t.black,
-    [1]  = t.red,
-    [2]  = t.green,
-    [3]  = t.yellow,
-    [4]  = t.blue,
-    [5]  = t.magenta,
-    [6]  = t.cyan,
-    [7]  = t.white,
-    [8]  = t.bright_black,
-    [9]  = t.bright_red,
+    [0] = t.black,
+    [1] = t.red,
+    [2] = t.green,
+    [3] = t.yellow,
+    [4] = t.blue,
+    [5] = t.magenta,
+    [6] = t.cyan,
+    [7] = t.white,
+    [8] = t.bright_black,
+    [9] = t.bright_red,
     [10] = t.bright_green,
     [11] = t.bright_yellow,
     [12] = t.bright_blue,
