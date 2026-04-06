@@ -15,19 +15,14 @@ plugins out of the box.
 
 ## Screenshots
 
-<!-- Drop preview images into ./screenshots/ and they'll show up here. -->
-
 <table>
   <tr>
-    <td><img src="./screenshots/typescript.png" alt="TypeScript" /></td>
-    <td><img src="./screenshots/astro.png" alt="Astro" /></td>
+    <td width="50%"><img src="./screenshots/typescript.png" alt="TypeScript" /></td>
+    <td width="50%"><img src="./screenshots/astro.png" alt="Astro" /></td>
   </tr>
   <tr>
-    <td><img src="./screenshots/lua.png" alt="Lua" /></td>
-    <td><img src="./screenshots/markdown.png" alt="Markdown" /></td>
-  </tr>
-  <tr>
-    <td colspan="2"><img src="./screenshots/picker.png" alt="snacks.picker" /></td>
+    <td width="50%"><img src="./screenshots/lua.png" alt="Lua" /></td>
+    <td width="50%"><img src="./screenshots/markdown.png" alt="Markdown" /></td>
   </tr>
 </table>
 
@@ -155,57 +150,117 @@ require("lualine").setup({
 
 ## Supported plugins
 
-Out-of-the-box highlight support for:
+Foundation:
 
-- Treesitter (`@`-prefixed groups)
-- LSP diagnostics + semantic tokens
-- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- **Treesitter** (`@`-prefixed capture groups)
+- **LSP** diagnostics, references, inlay hints, and semantic tokens
+  (including the `readonly` modifier so JS/TS `const` references render
+  in lavender)
+
+**Editor & navigation:**
+
+- [snacks.nvim](https://github.com/folke/snacks.nvim) — picker, notifier,
+  input, indent, dim, scratch, zen, dashboard, statuscolumn, winbar, diff
 - [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
 - [nvim-tree.lua](https://github.com/nvim-tree/nvim-tree.lua)
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim)
-- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) (bundled theme)
 - [which-key.nvim](https://github.com/folke/which-key.nvim)
 - [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
-- [noice.nvim](https://github.com/folke/noice.nvim)
-- [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [leap.nvim](https://github.com/ggandor/leap.nvim)
+- [flash.nvim](https://github.com/folke/flash.nvim)
+- [mason.nvim](https://github.com/mason-org/mason.nvim)
+- [outline.nvim](https://github.com/hedyhli/outline.nvim)
+- [aerial.nvim](https://github.com/stevearc/aerial.nvim)
+- [yazi.nvim](https://github.com/mikavilpas/yazi.nvim)
+- [mini.nvim](https://github.com/echasnovski/mini.nvim) — statusline,
+  indentscope, cursorword, files, pick, notify, hipatterns, jump2d, diff
+
+**Completion:**
+
 - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
 - [blink.cmp](https://github.com/Saghen/blink.cmp)
+
+**LSP & diagnostics:**
+
+- [lspsaga.nvim](https://github.com/nvimdev/lspsaga.nvim)
 - [trouble.nvim](https://github.com/folke/trouble.nvim)
 - [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
-- [flash.nvim](https://github.com/folke/flash.nvim)
-- [mini.nvim](https://github.com/echasnovski/mini.nvim) (statusline,
-  indentscope, cursorword, diff)
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+
+**Git:**
+
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [diffview.nvim](https://github.com/sindrets/diffview.nvim)
+- [vim-fugitive](https://github.com/tpope/vim-fugitive)
+- [neogit](https://github.com/NeogitOrg/neogit)
+
+**Markdown:**
+
+- [render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim)
+- [headlines.nvim](https://github.com/lukas-reineke/headlines.nvim)
+- [obsidian.nvim](https://github.com/epwalsh/obsidian.nvim)
+
+**AI:**
+
+- [copilot.lua](https://github.com/zbirenbaum/copilot.lua) /
+  [copilot.vim](https://github.com/github/copilot.vim)
+- [codecompanion.nvim](https://github.com/olimorris/codecompanion.nvim)
+- [claudecode.nvim](https://github.com/coder/claudecode.nvim)
+
+**Debug:**
+
+- [nvim-dap](https://github.com/mfussenegger/nvim-dap)
+- [nvim-dap-ui](https://github.com/rcarriga/nvim-dap-ui)
+
+**UI & misc:**
+
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) (bundled theme)
+- [noice.nvim](https://github.com/folke/noice.nvim)
+- [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [toggleterm.nvim](https://github.com/akinsho/toggleterm.nvim)
 - [lazy.nvim](https://github.com/folke/lazy.nvim)
+
+Missing one you use? [Open an issue](https://github.com/devbydaniel/houston.nvim/issues/new/choose)
+or send a PR — see [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 ## Structure
 
 ```
 houston.nvim/
-├── colors/houston.lua         # entry point
-└── lua/
-    ├── houston/
-    │   ├── init.lua            # load() + setup()
-    │   ├── config.lua          # defaults
-    │   ├── palette.lua         # raw colors
-    │   └── groups/
-    │       ├── editor.lua       # core editor groups
-    │       ├── syntax.lua       # legacy vim syntax
-    │       ├── treesitter.lua   # @ capture groups
-    │       ├── lsp.lua          # diagnostics + semantic tokens
-    │       └── plugins.lua      # plugin highlights
-    └── lualine/themes/houston.lua
+├── colors/houston.lua            # entry point (`:colorscheme houston`)
+├── lua/
+│   ├── houston/
+│   │   ├── init.lua               # load() + setup()
+│   │   ├── config.lua             # defaults + HoustonConfig type
+│   │   ├── palette.lua            # raw hex values
+│   │   └── groups/
+│   │       ├── editor.lua          # core editor groups
+│   │       ├── syntax.lua          # legacy vim syntax
+│   │       ├── treesitter.lua      # @ capture groups
+│   │       ├── lsp.lua             # diagnostics + semantic tokens
+│   │       └── plugins.lua         # plugin highlights
+│   └── lualine/themes/houston.lua
+└── extras/houston-vscode.json    # source theme JSON for reference
 ```
+
+## Contributing
+
+Issues and PRs welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the
+project layout, local dev loop, and the Conventional Commits cheat sheet
+(used by [release-please](https://github.com/googleapis/release-please) to
+automate the [CHANGELOG](./CHANGELOG.md) and version bumps).
 
 ## Credits
 
-- [Astro](https://astro.build/) for the original
-  [Houston VSCode theme](https://github.com/withastro/houston-vscode).
+- [Astro](https://astro.build/) and [The Astro Technology Company](https://github.com/withastro)
+  for the original [Houston VSCode theme](https://github.com/withastro/houston-vscode).
+  See [NOTICE](./NOTICE) for the full attribution.
 - Structure inspired by
   [tokyonight.nvim](https://github.com/folke/tokyonight.nvim) and
   [catppuccin/nvim](https://github.com/catppuccin/nvim).
 
 ## License
 
-MIT — see [LICENSE](./LICENSE). The original Houston VSCode theme is also
-MIT-licensed by The Astro Technology Company.
+[MIT](./LICENSE). The original Houston VSCode theme is also MIT-licensed by
+The Astro Technology Company; see [NOTICE](./NOTICE) for details.
