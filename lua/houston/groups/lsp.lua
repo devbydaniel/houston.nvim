@@ -44,41 +44,48 @@ function M.get(c, _opts)
     LspSignatureActiveParameter = { fg = c.cyan, bold = true },
     LspCodeLens = { fg = c.fg_muted },
     LspCodeLensSeparator = { fg = c.fg_muted },
-    LspInlayHint = { fg = c.fg_subtle, bg = c.bg_panel, italic = true },
+    LspInlayHint = { fg = c.comment, bg = c.bg_panel, italic = true },
 
-    -- LSP semantic tokens
-    ["@lsp.type.class"] = { fg = c.peach },
+    -- LSP semantic tokens (mapped from Houston VSCode + semanticTokenColors override)
+    -- Default semantic types
+    ["@lsp.type.class"] = { fg = c.lavender }, -- entity.name.class
     ["@lsp.type.comment"] = {},
     ["@lsp.type.decorator"] = { fg = c.lavender },
-    ["@lsp.type.enum"] = { fg = c.peach },
-    ["@lsp.type.enumMember"] = { fg = c.fg },
-    ["@lsp.type.function"] = { fg = c.blue },
-    ["@lsp.type.interface"] = { fg = c.peach },
-    ["@lsp.type.keyword"] = { fg = c.magenta },
+    ["@lsp.type.enum"] = { fg = c.lavender }, -- entity.name.type
+    ["@lsp.type.enumMember"] = { fg = c.fg }, -- semanticTokenColors override
+    ["@lsp.type.function"] = { fg = c.cyan }, -- entity.name.function
+    ["@lsp.type.interface"] = { fg = c.lavender }, -- entity.name.type
+    ["@lsp.type.keyword"] = { fg = c.blue },
     ["@lsp.type.macro"] = { fg = c.lavender },
-    ["@lsp.type.method"] = { fg = c.blue },
-    ["@lsp.type.modifier"] = { fg = c.magenta },
-    ["@lsp.type.namespace"] = { fg = c.fg },
+    ["@lsp.type.method"] = { fg = c.cyan },
+    ["@lsp.type.modifier"] = { fg = c.blue }, -- storage.modifier
+    ["@lsp.type.namespace"] = { fg = c.lavender }, -- entity.name.namespace
     ["@lsp.type.number"] = { fg = c.peach },
     ["@lsp.type.operator"] = { fg = c.fg },
-    ["@lsp.type.parameter"] = { fg = c.fg },
-    ["@lsp.type.property"] = { fg = c.fg },
-    ["@lsp.type.regexp"] = { fg = c.cyan },
-    ["@lsp.type.string"] = { fg = c.mint },
-    ["@lsp.type.struct"] = { fg = c.peach },
-    ["@lsp.type.type"] = { fg = c.peach },
-    ["@lsp.type.typeParameter"] = { fg = c.peach },
-    ["@lsp.type.variable"] = { fg = c.fg },
+    ["@lsp.type.parameter"] = { fg = c.mint }, -- variable.parameter.function.js
+    ["@lsp.type.property"] = { fg = c.mint }, -- meta.object-literal.key / property
+    ["@lsp.type.regexp"] = { fg = c.fg }, -- string.regexp → fg
+    ["@lsp.type.string"] = { fg = c.peach },
+    ["@lsp.type.struct"] = { fg = c.lavender }, -- entity.name.type
+    ["@lsp.type.type"] = { fg = c.lavender }, -- entity.name.type
+    ["@lsp.type.typeParameter"] = { fg = c.lavender },
+    ["@lsp.type.variable"] = { fg = c.mint }, -- variable.other.readwrite
 
-    ["@lsp.typemod.variable.defaultLibrary"] = { fg = c.lavender },
+    -- Semantic token modifiers (from semanticTokenColors override)
+    -- variable.constant → peach (override), variable.defaultLibrary → lavender (override)
     ["@lsp.typemod.variable.constant"] = { fg = c.peach },
-    ["@lsp.typemod.variable.readonly"] = { fg = c.peach },
-    ["@lsp.typemod.function.defaultLibrary"] = { fg = c.blue },
-    ["@lsp.typemod.method.defaultLibrary"] = { fg = c.blue },
-    ["@lsp.typemod.parameter.readonly"] = { fg = c.fg },
-    ["@lsp.typemod.property.readonly"] = { fg = c.fg },
-    ["@lsp.typemod.keyword.async"] = { fg = c.magenta },
-    ["@lsp.typemod.keyword.documentation"] = { fg = c.magenta },
+    ["@lsp.typemod.variable.defaultLibrary"] = { fg = c.lavender },
+    -- `const`-declared variables get the `readonly` modifier in TS LSP.
+    -- VSCode TextMate has variable.other.constant → lavender, so map readonly → lavender
+    -- to match the screenshot (purple `const` references).
+    ["@lsp.typemod.variable.readonly"] = { fg = c.lavender },
+    ["@lsp.typemod.variable.readonly.defaultLibrary"] = { fg = c.lavender },
+    ["@lsp.typemod.function.defaultLibrary"] = { fg = c.cyan },
+    ["@lsp.typemod.method.defaultLibrary"] = { fg = c.cyan },
+    ["@lsp.typemod.parameter.readonly"] = { fg = c.mint },
+    ["@lsp.typemod.property.readonly"] = { fg = c.mint },
+    ["@lsp.typemod.keyword.async"] = { fg = c.blue },
+    ["@lsp.typemod.keyword.documentation"] = { fg = c.blue },
   }
 end
 

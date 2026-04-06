@@ -17,7 +17,8 @@ M.bg_statusline = "#17548b" -- statusBar.background
 M.fg = "#eef0f9" -- editor.foreground
 M.fg_dim = "#bfc1c9" -- sidebar text
 M.fg_muted = "#858b98" -- inactive tab / line nr active
-M.fg_subtle = "#545864" -- line numbers / comments
+M.fg_subtle = "#545864" -- line numbers
+M.comment = "#909198" -- comment color (blend of #eef0f98f over bg)
 
 -- Accents (the 11 syntax colors)
 M.blue = "#54b9ff"
