@@ -280,6 +280,172 @@ function M.get(c, _opts)
     MiniDiffSignDelete = { fg = c.git.deleted },
 
     -----------------------------------------------------------
+    -- snacks.nvim
+    -----------------------------------------------------------
+    -- Generic
+    SnacksNormal = { fg = c.fg, bg = c.bg_float },
+    SnacksNormalNC = { fg = c.fg, bg = c.bg_float },
+    SnacksWinSeparator = { fg = c.bg_float, bg = c.bg_float },
+    SnacksBackdrop = { bg = c.bg },
+    SnacksTitle = { fg = c.cyan, bold = true },
+    SnacksFooter = { fg = c.fg_muted },
+    SnacksFooterDesc = { fg = c.fg_muted },
+    SnacksFooterKey = { fg = c.cyan },
+
+    -- snacks.picker
+    -- The picker creates per-window highlights via winhighlight that link
+    -- NormalFloat -> SnacksPicker{Input,List,Preview}, so these set the
+    -- background for each pane explicitly.
+    SnacksPicker = { fg = c.fg, bg = c.bg_float },
+    SnacksPickerInput = { fg = c.fg, bg = c.bg_float },
+    SnacksPickerInputBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksPickerInputTitle = { fg = c.bg, bg = c.cyan, bold = true },
+    SnacksPickerInputFooter = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksPickerInputSearch = { fg = c.peach, bold = true },
+    SnacksPickerList = { fg = c.fg, bg = c.bg_float },
+    SnacksPickerListBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksPickerListTitle = { fg = c.bg, bg = c.cyan, bold = true },
+    SnacksPickerListFooter = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksPickerListCursorLine = { bg = c.bg_panel, bold = true },
+    SnacksPickerPreview = { fg = c.fg, bg = c.bg_float },
+    SnacksPickerPreviewBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksPickerPreviewTitle = { fg = c.bg, bg = c.cyan, bold = true },
+    SnacksPickerPreviewFooter = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksPickerPreviewCursorLine = { bg = c.bg_panel },
+    -- Picker content
+    SnacksPickerMatch = { fg = c.cyan, bold = true },
+    SnacksPickerSelected = { fg = c.cyan, bold = true },
+    SnacksPickerUnselected = { fg = c.fg_muted },
+    SnacksPickerPrompt = { fg = c.cyan, bold = true },
+    SnacksPickerTotals = { fg = c.fg_muted },
+    SnacksPickerDir = { fg = c.comment },
+    SnacksPickerFile = { fg = c.fg },
+    SnacksPickerDirectory = { fg = c.blue },
+    SnacksPickerPathHidden = { fg = c.fg_muted },
+    SnacksPickerPathIgnored = { fg = c.fg_muted },
+    SnacksPickerComment = { fg = c.comment, italic = true },
+    SnacksPickerDesc = { fg = c.comment },
+    SnacksPickerLabel = { fg = c.lavender },
+    SnacksPickerSpecial = { fg = c.lavender },
+    SnacksPickerDimmed = { fg = c.fg_muted },
+    SnacksPickerDelim = { fg = c.fg_muted },
+    SnacksPickerRow = { fg = c.peach },
+    SnacksPickerCol = { fg = c.fg_subtle },
+    SnacksPickerIdx = { fg = c.peach },
+    SnacksPickerBold = { bold = true },
+    SnacksPickerItalic = { italic = true },
+    SnacksPickerSpinner = { fg = c.cyan },
+    SnacksPickerToggle = { fg = c.cyan, bg = c.bg_panel },
+    SnacksPickerTree = { fg = c.fg_subtle },
+    SnacksPickerRule = { fg = c.fg_muted },
+    SnacksPickerCode = { fg = c.peach },
+    SnacksPickerLink = { fg = c.blue, underline = true },
+    SnacksPickerLinkBroken = { fg = c.red },
+    -- Picker git
+    SnacksPickerGitBranch = { fg = c.cyan },
+    SnacksPickerGitBranchCurrent = { fg = c.cyan, bold = true },
+    SnacksPickerGitCommit = { fg = c.peach },
+    SnacksPickerGitDate = { fg = c.fg_muted },
+    SnacksPickerGitAuthor = { fg = c.lavender },
+    SnacksPickerGitStatus = { fg = c.peach },
+    SnacksPickerGitStatusAdded = { fg = c.mint },
+    SnacksPickerGitStatusModified = { fg = c.peach },
+    SnacksPickerGitStatusDeleted = { fg = c.pink },
+    SnacksPickerGitStatusRenamed = { fg = c.peach },
+    SnacksPickerGitStatusUntracked = { fg = c.fg_muted },
+    SnacksPickerGitStatusIgnored = { fg = c.fg_muted },
+    SnacksPickerGitStatusUnmerged = { fg = c.red },
+    SnacksPickerGitStatusStaged = { fg = c.mint },
+
+    -- snacks.notifier (replaces nvim-notify)
+    SnacksNotifierError = { fg = c.red, bg = c.bg_float },
+    SnacksNotifierWarn = { fg = c.peach, bg = c.bg_float },
+    SnacksNotifierInfo = { fg = c.blue, bg = c.bg_float },
+    SnacksNotifierDebug = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierTrace = { fg = c.lavender, bg = c.bg_float },
+    SnacksNotifierIconError = { fg = c.red, bg = c.bg_float },
+    SnacksNotifierIconWarn = { fg = c.peach, bg = c.bg_float },
+    SnacksNotifierIconInfo = { fg = c.blue, bg = c.bg_float },
+    SnacksNotifierIconDebug = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierIconTrace = { fg = c.lavender, bg = c.bg_float },
+    SnacksNotifierTitleError = { fg = c.red, bg = c.bg_float, bold = true },
+    SnacksNotifierTitleWarn = { fg = c.peach, bg = c.bg_float, bold = true },
+    SnacksNotifierTitleInfo = { fg = c.blue, bg = c.bg_float, bold = true },
+    SnacksNotifierTitleDebug = { fg = c.fg_muted, bg = c.bg_float, bold = true },
+    SnacksNotifierTitleTrace = { fg = c.lavender, bg = c.bg_float, bold = true },
+    SnacksNotifierBorderError = { fg = c.red, bg = c.bg_float },
+    SnacksNotifierBorderWarn = { fg = c.peach, bg = c.bg_float },
+    SnacksNotifierBorderInfo = { fg = c.blue, bg = c.bg_float },
+    SnacksNotifierBorderDebug = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierBorderTrace = { fg = c.lavender, bg = c.bg_float },
+    SnacksNotifierFooterError = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierFooterWarn = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierFooterInfo = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierFooterDebug = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierFooterTrace = { fg = c.fg_muted, bg = c.bg_float },
+    SnacksNotifierHistory = { fg = c.fg, bg = c.bg_float },
+    SnacksNotifierHistoryTitle = { fg = c.cyan, bg = c.bg_float, bold = true },
+    SnacksNotifierMinimal = { fg = c.fg, bg = c.bg_float },
+
+    -- snacks.input
+    SnacksInput = { fg = c.fg, bg = c.bg_float },
+    SnacksInputNormal = { fg = c.fg, bg = c.bg_float },
+    SnacksInputBorder = { fg = c.cyan, bg = c.bg_float },
+    SnacksInputTitle = { fg = c.bg, bg = c.cyan, bold = true },
+    SnacksInputIcon = { fg = c.cyan },
+
+    -- snacks.indent
+    SnacksIndent = { fg = c.bg_float },
+    SnacksIndentScope = { fg = c.fg_muted },
+    SnacksIndentChunk = { fg = c.fg_muted },
+    SnacksIndentUnderline = { sp = c.fg_muted, underline = true },
+
+    -- snacks.dim
+    SnacksDim = { fg = c.fg_subtle },
+
+    -- snacks.scratch
+    SnacksScratch = { fg = c.fg, bg = c.bg_float },
+    SnacksScratchTitle = { fg = c.cyan, bg = c.bg_float, bold = true },
+    SnacksScratchKey = { fg = c.peach },
+    SnacksScratchDesc = { fg = c.fg_muted },
+
+    -- snacks.zen
+    SnacksZen = { fg = c.fg, bg = c.bg },
+    SnacksZenIcon = { fg = c.cyan },
+
+    -- snacks.dashboard
+    SnacksDashboardNormal = { fg = c.fg, bg = c.bg },
+    SnacksDashboardIcon = { fg = c.cyan },
+    SnacksDashboardKey = { fg = c.peach },
+    SnacksDashboardDesc = { fg = c.fg },
+    SnacksDashboardTitle = { fg = c.cyan, bold = true },
+    SnacksDashboardHeader = { fg = c.cyan, bold = true },
+    SnacksDashboardFooter = { fg = c.fg_muted, italic = true },
+    SnacksDashboardSpecial = { fg = c.lavender },
+    SnacksDashboardDir = { fg = c.blue },
+    SnacksDashboardFile = { fg = c.fg },
+    SnacksDashboardTerminal = { fg = c.fg },
+
+    -- snacks.statuscolumn
+    SnacksStatusColumn = { fg = c.fg_muted, bg = c.bg },
+    SnacksStatusColumnMark = { fg = c.cyan },
+
+    -- snacks.win (winbar / floating windows)
+    SnacksWinBar = { fg = c.fg, bg = c.bg },
+    SnacksWinBarNC = { fg = c.fg_muted, bg = c.bg },
+    SnacksWinKey = { fg = c.cyan, bold = true },
+    SnacksWinKeyDesc = { fg = c.fg },
+    SnacksWinKeySep = { fg = c.fg_muted },
+
+    -- snacks.diff
+    SnacksDiffAdd = { bg = c.diff.add },
+    SnacksDiffDelete = { bg = c.diff.delete },
+    SnacksDiffContext = { fg = c.fg_muted },
+    SnacksDiffHeader = { fg = c.cyan, bold = true },
+    SnacksDiffLabel = { fg = c.lavender },
+    SnacksDiffConflict = { fg = c.peach },
+
+    -----------------------------------------------------------
     -- render-markdown.nvim
     -- Headings follow the same cool→warm walk as treesitter `@markup.heading.N`.
     -- Background variants use a subtle tint of the same hue.
