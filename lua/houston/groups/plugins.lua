@@ -280,6 +280,70 @@ function M.get(c, _opts)
     MiniDiffSignDelete = { fg = c.git.deleted },
 
     -----------------------------------------------------------
+    -- leap.nvim
+    -----------------------------------------------------------
+    LeapMatch = { fg = c.bg, bg = c.cyan, bold = true },
+    LeapLabel = { fg = c.bg, bg = c.magenta, bold = true },
+    LeapLabelPrimary = { fg = c.bg, bg = c.magenta, bold = true },
+    LeapLabelSecondary = { fg = c.bg, bg = c.lavender, bold = true },
+    LeapLabelDimmed = { fg = c.fg_muted, bg = c.bg_panel },
+    LeapBackdrop = { fg = c.fg_subtle },
+
+    -----------------------------------------------------------
+    -- mason.nvim
+    -----------------------------------------------------------
+    MasonNormal = { fg = c.fg, bg = c.bg_float },
+    MasonHeader = { fg = c.bg, bg = c.cyan, bold = true },
+    MasonHeaderSecondary = { fg = c.bg, bg = c.lavender, bold = true },
+    MasonHeading = { fg = c.fg, bold = true },
+    MasonHighlight = { fg = c.cyan },
+    MasonHighlightBlock = { fg = c.bg, bg = c.cyan },
+    MasonHighlightBlockBold = { fg = c.bg, bg = c.cyan, bold = true },
+    MasonHighlightSecondary = { fg = c.lavender },
+    MasonHighlightBlockSecondary = { fg = c.bg, bg = c.lavender },
+    MasonHighlightBlockBoldSecondary = { fg = c.bg, bg = c.lavender, bold = true },
+    MasonMuted = { fg = c.fg_muted },
+    MasonMutedBlock = { fg = c.fg_muted, bg = c.bg_panel },
+    MasonMutedBlockBold = { fg = c.fg, bg = c.bg_panel, bold = true },
+    MasonError = { fg = c.red },
+    MasonWarning = { fg = c.peach },
+    MasonLink = { fg = c.blue, underline = true },
+    MasonBackdrop = { bg = c.bg },
+    MasonCursorLine = { bg = c.bg_panel },
+    MasonInstall = { fg = c.mint },
+    MasonUninstall = { fg = c.pink },
+    MasonUninstallAll = { fg = c.red },
+    MasonUpdate = { fg = c.peach },
+
+    -----------------------------------------------------------
+    -- outline.nvim (hedyhli/outline.nvim)
+    -----------------------------------------------------------
+    Outline = { fg = c.fg, bg = c.bg_panel },
+    OutlineGuides = { fg = c.bg_float },
+    OutlineConnector = { fg = c.bg_float },
+    OutlineFoldMarker = { fg = c.fg_muted },
+    OutlineCurrent = { fg = c.cyan, bold = true },
+    OutlineDetails = { fg = c.comment, italic = true },
+    OutlineLineno = { fg = c.fg_subtle },
+    OutlineJumpHighlight = { bg = c.bg_selection },
+    OutlineFocusCode = { bg = c.bg_panel },
+    OutlineFocusOutline = { bg = c.bg_panel },
+    OutlineHelp = { fg = c.fg },
+    OutlineHelpTip = { fg = c.fg_muted, italic = true },
+    OutlineKeymapHelpKey = { fg = c.cyan },
+    OutlineKeymapHelpDisabled = { fg = c.fg_subtle },
+    OutlineStatus = { fg = c.fg_muted },
+    OutlineStatusError = { fg = c.red },
+    OutlineStatusFt = { fg = c.lavender },
+    OutlineStatusProvider = { fg = c.cyan },
+
+    -----------------------------------------------------------
+    -- yazi.nvim
+    -----------------------------------------------------------
+    YaziFloat = { fg = c.fg, bg = c.bg_float },
+    YaziFloatBorder = { fg = c.fg_muted, bg = c.bg_float },
+
+    -----------------------------------------------------------
     -- snacks.nvim
     -----------------------------------------------------------
     -- Generic
