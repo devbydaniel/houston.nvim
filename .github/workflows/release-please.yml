@@ -16,3 +16,9 @@ jobs:
         with:
           config-file: release-please-config.json
           manifest-file: .release-please-manifest.json
+          # Use a PAT (if available) so commits made by release-please appear
+          # as the user and trigger downstream workflows like `lint`. Falls
+          # back to GITHUB_TOKEN, in which case release PRs won't have lint
+          # checks attached (GitHub blocks workflow recursion via GITHUB_TOKEN).
+          # See: https://docs.github.com/en/actions/using-workflows/triggering-a-workflow#triggering-a-workflow-from-a-workflow
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN || secrets.GITHUB_TOKEN }}
