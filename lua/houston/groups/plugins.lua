@@ -344,6 +344,317 @@ function M.get(c, _opts)
     YaziFloatBorder = { fg = c.fg_muted, bg = c.bg_float },
 
     -----------------------------------------------------------
+    -- lspsaga.nvim
+    -----------------------------------------------------------
+    SagaNormal = { fg = c.fg, bg = c.bg_float },
+    SagaBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SagaTitle = { fg = c.cyan, bold = true },
+    SagaCount = { fg = c.peach },
+    SagaSep = { fg = c.fg_muted },
+    SagaBeacon = { bg = c.cyan },
+    SagaVirtLine = { fg = c.fg_muted },
+    SagaActionPreviewNormal = { fg = c.fg, bg = c.bg_float },
+    SagaActionPreviewBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SagaActionPreviewTitle = { fg = c.cyan, bold = true },
+    SagaCodeActionBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SagaCodeActionNormal = { fg = c.fg, bg = c.bg_float },
+    SagaCodeActionTitle = { fg = c.cyan, bold = true },
+    SagaCodeActionContent = { fg = c.fg },
+    SagaCodeActionNumber = { fg = c.peach },
+    SagaDiagnosticBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SagaDiagnosticSource = { fg = c.fg_muted, italic = true },
+    SagaDiagnosticShowNormal = { fg = c.fg, bg = c.bg_float },
+    SagaDiagnosticShowBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SagaDiagnosticPos = { fg = c.fg_muted },
+    SagaDiagnosticWord = { fg = c.fg },
+    SagaErrorText = { fg = c.red },
+    SagaWarnText = { fg = c.peach },
+    SagaInfoText = { fg = c.blue },
+    SagaHintText = { fg = c.cyan },
+    SagaErrorBorder = { fg = c.red, bg = c.bg_float },
+    SagaWarnBorder = { fg = c.peach, bg = c.bg_float },
+    SagaInfoBorder = { fg = c.blue, bg = c.bg_float },
+    SagaHintBorder = { fg = c.cyan, bg = c.bg_float },
+    SagaFinderFname = { fg = c.cyan, bold = true },
+    SagaFinderCount = { fg = c.peach },
+    SagaFinderIcon = { fg = c.cyan },
+    SagaFinderType = { fg = c.lavender },
+    SagaHoverNormal = { fg = c.fg, bg = c.bg_float },
+    SagaHoverBorder = { fg = c.fg_muted, bg = c.bg_float },
+    SagaIncomingNormal = { fg = c.fg, bg = c.bg_float },
+    SagaOutgoingNormal = { fg = c.fg, bg = c.bg_float },
+    SagaRenameBorder = { fg = c.cyan, bg = c.bg_float },
+    SagaRenameNormal = { fg = c.peach, bg = c.bg_float },
+    SagaRenameMatch = { bg = c.bg_selection, bold = true },
+    SagaWinbarFile = { fg = c.fg, bold = true },
+    SagaWinbarFolder = { fg = c.lavender },
+    SagaWinbarFolderName = { fg = c.lavender },
+    SagaWinbarFileName = { fg = c.fg },
+    SagaWinbarSep = { fg = c.fg_muted },
+    SagaWinbarModule = { fg = c.lavender },
+    SagaWinbarClass = { fg = c.lavender },
+    SagaWinbarMethod = { fg = c.cyan },
+    SagaWinbarFunction = { fg = c.cyan },
+    SagaWinbarVariable = { fg = c.mint },
+
+    -----------------------------------------------------------
+    -- headlines.nvim
+    -----------------------------------------------------------
+    Headline = { bg = c.bg_panel, bold = true },
+    Headline1 = { fg = c.cyan, bg = c.bg_panel, bold = true },
+    Headline2 = { fg = c.blue, bg = c.bg_panel, bold = true },
+    Headline3 = { fg = c.lavender, bg = c.bg_panel, bold = true },
+    Headline4 = { fg = c.magenta, bg = c.bg_panel, bold = true },
+    Headline5 = { fg = c.pink, bg = c.bg_panel, bold = true },
+    Headline6 = { fg = c.peach, bg = c.bg_panel, bold = true },
+    CodeBlock = { bg = c.bg_panel },
+    Dash = { fg = c.fg_muted, bold = true },
+    DoubleDash = { fg = c.fg_muted, bold = true },
+    Quote = { fg = c.fg_muted },
+
+    -----------------------------------------------------------
+    -- obsidian.nvim
+    -----------------------------------------------------------
+    ObsidianTodo = { fg = c.cyan, bold = true },
+    ObsidianDone = { fg = c.mint, bold = true },
+    ObsidianRightArrow = { fg = c.peach, bold = true },
+    ObsidianTilde = { fg = c.pink, bold = true },
+    ObsidianImportant = { fg = c.red, bold = true },
+    ObsidianBullet = { fg = c.cyan, bold = true },
+    ObsidianRefText = { fg = c.lavender, underline = true },
+    ObsidianExtLinkIcon = { fg = c.lavender },
+    ObsidianTag = { fg = c.cyan, italic = true },
+    ObsidianBlockID = { fg = c.cyan, italic = true },
+    ObsidianHighlightText = { fg = c.bg, bg = c.peach },
+
+    -----------------------------------------------------------
+    -- vim-illuminate
+    -----------------------------------------------------------
+    IlluminatedWordText = { bg = c.bg_panel },
+    IlluminatedWordRead = { bg = c.bg_panel },
+    IlluminatedWordWrite = { bg = c.bg_panel },
+
+    -----------------------------------------------------------
+    -- toggleterm.nvim
+    -----------------------------------------------------------
+    ToggleTerm = { fg = c.fg, bg = c.bg },
+    ToggleTermNormal = { fg = c.fg, bg = c.bg },
+    ToggleTermBorder = { fg = c.fg_muted, bg = c.bg },
+
+    -----------------------------------------------------------
+    -- copilot.lua / copilot.vim
+    -----------------------------------------------------------
+    CopilotSuggestion = { fg = c.fg_subtle, italic = true },
+    CopilotAnnotation = { fg = c.fg_subtle, italic = true },
+
+    -----------------------------------------------------------
+    -- codecompanion.nvim
+    -----------------------------------------------------------
+    CodeCompanionChatHeader = { fg = c.cyan, bold = true },
+    CodeCompanionChatSubtext = { fg = c.fg_muted, italic = true },
+    CodeCompanionChatSeparator = { fg = c.fg_muted },
+    CodeCompanionChatTokens = { fg = c.peach },
+    CodeCompanionChatTool = { fg = c.lavender, bold = true },
+    CodeCompanionChatToolGroup = { fg = c.cyan },
+    CodeCompanionChatVariable = { fg = c.mint },
+    CodeCompanionChatAgent = { fg = c.lavender, bold = true },
+    CodeCompanionVirtualText = { fg = c.fg_subtle, italic = true },
+    CodeCompanionVirtualTextAgents = { fg = c.lavender, italic = true },
+    CodeCompanionVirtualTextTools = { fg = c.cyan, italic = true },
+
+    -----------------------------------------------------------
+    -- claudecode.nvim / claude-code.nvim
+    -----------------------------------------------------------
+    ClaudeCode = { fg = c.fg, bg = c.bg_float },
+    ClaudeCodeNormal = { fg = c.fg, bg = c.bg_float },
+    ClaudeCodeBorder = { fg = c.peach, bg = c.bg_float }, -- peach ≈ Anthropic orange
+    ClaudeCodeTitle = { fg = c.peach, bold = true },
+    ClaudeCodeUserMessage = { fg = c.fg },
+    ClaudeCodeAssistantMessage = { fg = c.fg_dim },
+    ClaudeCodeSystemMessage = { fg = c.fg_muted, italic = true },
+    ClaudeCodeError = { fg = c.red },
+
+    -----------------------------------------------------------
+    -- mini.* extras (mini.files / mini.pick / mini.notify / mini.hipatterns / mini.jump2d)
+    -----------------------------------------------------------
+    -- mini.files
+    MiniFilesBorder = { fg = c.fg_muted, bg = c.bg_float },
+    MiniFilesBorderModified = { fg = c.peach, bg = c.bg_float },
+    MiniFilesCursorLine = { bg = c.bg_panel, bold = true },
+    MiniFilesDirectory = { fg = c.blue },
+    MiniFilesFile = { fg = c.fg },
+    MiniFilesNormal = { fg = c.fg, bg = c.bg_float },
+    MiniFilesTitle = { fg = c.fg_muted, bg = c.bg_float },
+    MiniFilesTitleFocused = { fg = c.cyan, bg = c.bg_float, bold = true },
+    -- mini.pick
+    MiniPickBorder = { fg = c.fg_muted, bg = c.bg_float },
+    MiniPickBorderBusy = { fg = c.peach, bg = c.bg_float },
+    MiniPickBorderText = { fg = c.cyan, bg = c.bg_float, bold = true },
+    MiniPickIconDirectory = { fg = c.blue },
+    MiniPickIconFile = { fg = c.fg },
+    MiniPickHeader = { fg = c.cyan, bold = true },
+    MiniPickMatchCurrent = { bg = c.bg_panel, bold = true },
+    MiniPickMatchMarked = { fg = c.peach },
+    MiniPickMatchRanges = { fg = c.cyan, bold = true },
+    MiniPickNormal = { fg = c.fg, bg = c.bg_float },
+    MiniPickPreviewLine = { bg = c.bg_panel },
+    MiniPickPreviewRegion = { bg = c.bg_selection },
+    MiniPickPrompt = { fg = c.cyan, bg = c.bg_float, bold = true },
+    -- mini.notify
+    MiniNotifyBorder = { fg = c.fg_muted, bg = c.bg_float },
+    MiniNotifyNormal = { fg = c.fg, bg = c.bg_float },
+    MiniNotifyTitle = { fg = c.cyan, bg = c.bg_float, bold = true },
+    MiniNotifyLspProgress = { fg = c.cyan, italic = true },
+    -- mini.hipatterns
+    MiniHipatternsFixme = { fg = c.bg, bg = c.red, bold = true },
+    MiniHipatternsHack = { fg = c.bg, bg = c.peach, bold = true },
+    MiniHipatternsTodo = { fg = c.bg, bg = c.cyan, bold = true },
+    MiniHipatternsNote = { fg = c.bg, bg = c.blue, bold = true },
+    -- mini.jump2d
+    MiniJump2dSpot = { fg = c.bg, bg = c.cyan, bold = true },
+    MiniJump2dSpotAhead = { fg = c.bg, bg = c.lavender, bold = true },
+    MiniJump2dSpotUnique = { fg = c.bg, bg = c.peach, bold = true },
+    MiniJump2dDim = { fg = c.fg_subtle },
+    -- mini.diff overlays (signs already covered above)
+    MiniDiffOverAdd = { bg = c.diff.add },
+    MiniDiffOverChange = { bg = c.diff.change },
+    MiniDiffOverChangeBuf = { bg = c.diff.change },
+    MiniDiffOverContext = { bg = c.bg_panel },
+    MiniDiffOverContextBuf = { bg = c.bg_panel },
+    MiniDiffOverDelete = { bg = c.diff.delete },
+
+    -----------------------------------------------------------
+    -- nvim-dap / nvim-dap-ui
+    -----------------------------------------------------------
+    DapBreakpoint = { fg = c.red },
+    DapBreakpointCondition = { fg = c.peach },
+    DapBreakpointRejected = { fg = c.fg_muted },
+    DapLogPoint = { fg = c.cyan },
+    DapStopped = { fg = c.mint },
+    DapStoppedLine = { bg = c.diff.add },
+    DapUIBreakpointsCurrentLine = { fg = c.peach, bold = true },
+    DapUIBreakpointsDisabledLine = { fg = c.fg_subtle },
+    DapUIBreakpointsInfo = { fg = c.mint },
+    DapUIBreakpointsLine = { fg = c.peach },
+    DapUIBreakpointsPath = { fg = c.cyan },
+    DapUICurrentFrameName = { fg = c.lavender, bold = true },
+    DapUIDecoration = { fg = c.cyan },
+    DapUIEndofBuffer = { fg = c.bg },
+    DapUIFloatBorder = { fg = c.fg_muted },
+    DapUIFrameName = { fg = c.fg },
+    DapUILineNumber = { fg = c.fg_subtle },
+    DapUIModifiedValue = { fg = c.peach, bold = true },
+    DapUINormal = { fg = c.fg, bg = c.bg },
+    DapUIPlayPause = { fg = c.mint },
+    DapUIPlayPauseNC = { fg = c.mint },
+    DapUIRestart = { fg = c.mint },
+    DapUIRestartNC = { fg = c.mint },
+    DapUIScope = { fg = c.cyan },
+    DapUISource = { fg = c.lavender },
+    DapUIStepBack = { fg = c.cyan },
+    DapUIStepInto = { fg = c.cyan },
+    DapUIStepOut = { fg = c.cyan },
+    DapUIStepOver = { fg = c.cyan },
+    DapUIStop = { fg = c.red },
+    DapUIStoppedThread = { fg = c.cyan },
+    DapUIThread = { fg = c.mint },
+    DapUIType = { fg = c.lavender },
+    DapUIUnavailable = { fg = c.fg_subtle },
+    DapUIValue = { fg = c.fg },
+    DapUIVariable = { fg = c.fg },
+    DapUIWatchesEmpty = { fg = c.red },
+    DapUIWatchesError = { fg = c.red },
+    DapUIWatchesValue = { fg = c.mint },
+    DapUIWinSelect = { fg = c.cyan, bold = true },
+
+    -----------------------------------------------------------
+    -- diffview.nvim
+    -----------------------------------------------------------
+    DiffviewNormal = { fg = c.fg, bg = c.bg_panel },
+    DiffviewStatusLine = { fg = c.fg, bg = c.bg_panel },
+    DiffviewStatusLineNC = { fg = c.fg_muted, bg = c.bg_panel },
+    DiffviewWinSeparator = { fg = c.bg_float, bg = c.bg_panel },
+    DiffviewSignColumn = { bg = c.bg_panel },
+    DiffviewCursorLine = { bg = c.bg_float },
+    DiffviewVertSplit = { fg = c.bg_float },
+    DiffviewDim1 = { fg = c.fg_muted },
+    DiffviewFolderName = { fg = c.blue },
+    DiffviewFolderSign = { fg = c.peach },
+    DiffviewFilePanelTitle = { fg = c.cyan, bold = true },
+    DiffviewFilePanelCounter = { fg = c.peach, bold = true },
+    DiffviewFilePanelFileName = { fg = c.fg },
+    DiffviewFilePanelPath = { fg = c.fg_muted },
+    DiffviewFilePanelInsertions = { fg = c.mint },
+    DiffviewFilePanelDeletions = { fg = c.pink },
+    DiffviewStatusAdded = { fg = c.mint },
+    DiffviewStatusModified = { fg = c.peach },
+    DiffviewStatusRenamed = { fg = c.peach },
+    DiffviewStatusCopied = { fg = c.peach },
+    DiffviewStatusTypeChange = { fg = c.peach },
+    DiffviewStatusUnmerged = { fg = c.red },
+    DiffviewStatusUnknown = { fg = c.fg_muted },
+    DiffviewStatusDeleted = { fg = c.pink },
+    DiffviewStatusBroken = { fg = c.red },
+    DiffviewStatusUntracked = { fg = c.cyan },
+    DiffviewStatusIgnored = { fg = c.fg_muted },
+    DiffviewReference = { fg = c.lavender },
+    DiffviewHash = { fg = c.peach },
+    DiffviewDate = { fg = c.fg_muted },
+    DiffviewAuthor = { fg = c.lavender },
+
+    -----------------------------------------------------------
+    -- vim-fugitive
+    -----------------------------------------------------------
+    fugitiveHeader = { fg = c.cyan, bold = true },
+    fugitiveHeading = { fg = c.cyan, bold = true },
+    fugitiveHash = { fg = c.peach },
+    fugitiveSymbolicRef = { fg = c.lavender },
+    fugitiveStagedHeading = { fg = c.mint, bold = true },
+    fugitiveUnstagedHeading = { fg = c.peach, bold = true },
+    fugitiveUntrackedHeading = { fg = c.cyan, bold = true },
+    fugitiveStagedModifier = { fg = c.mint },
+    fugitiveUnstagedModifier = { fg = c.peach },
+    fugitiveUntrackedModifier = { fg = c.cyan },
+
+    -----------------------------------------------------------
+    -- neogit
+    -----------------------------------------------------------
+    NeogitDiffAdd = { fg = c.mint, bg = c.diff.add },
+    NeogitDiffAddHighlight = { fg = c.mint, bg = c.diff.add, bold = true },
+    NeogitDiffDelete = { fg = c.pink, bg = c.diff.delete },
+    NeogitDiffDeleteHighlight = { fg = c.pink, bg = c.diff.delete, bold = true },
+    NeogitDiffContext = { fg = c.fg },
+    NeogitDiffContextHighlight = { fg = c.fg, bg = c.bg_panel },
+    NeogitDiffHeader = { fg = c.cyan, bold = true },
+    NeogitDiffHeaderHighlight = { fg = c.cyan, bg = c.bg_panel, bold = true },
+    NeogitHunkHeader = { fg = c.lavender, bg = c.bg_panel },
+    NeogitHunkHeaderHighlight = { fg = c.lavender, bg = c.bg_panel, bold = true },
+    NeogitCommitViewHeader = { fg = c.cyan, bold = true },
+    NeogitFilePath = { fg = c.blue },
+    NeogitNotificationInfo = { fg = c.blue },
+    NeogitNotificationWarning = { fg = c.peach },
+    NeogitNotificationError = { fg = c.red },
+    NeogitObjectId = { fg = c.peach },
+    NeogitBranch = { fg = c.lavender, bold = true },
+    NeogitRemote = { fg = c.cyan },
+    NeogitTagName = { fg = c.peach },
+    NeogitTagDistance = { fg = c.fg_muted },
+    NeogitStash = { fg = c.lavender },
+    NeogitUnmergedInto = { fg = c.cyan },
+    NeogitUnpulledFrom = { fg = c.cyan },
+    NeogitFold = { fg = c.fg_muted },
+
+    -----------------------------------------------------------
+    -- aerial.nvim
+    -----------------------------------------------------------
+    AerialNormal = { fg = c.fg, bg = c.bg_panel },
+    AerialNormalNC = { fg = c.fg, bg = c.bg_panel },
+    AerialLine = { bg = c.bg_float, bold = true },
+    AerialLineNC = { bg = c.bg_panel },
+    AerialGuide = { fg = c.bg_float },
+    -- aerial uses @lsp.type.* for symbol kinds, which my LSP module already covers
+
+    -----------------------------------------------------------
     -- snacks.nvim
     -----------------------------------------------------------
     -- Generic
