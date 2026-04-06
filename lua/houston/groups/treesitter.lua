@@ -128,14 +128,22 @@ function M.get(c, opts)
     ["@markup.strikethrough"] = { strikethrough = true },
     ["@markup.underline"] = { underline = true },
 
-    -- `entity.name.section` → cyan
+    -- Headings walk the Houston color wheel cool → warm.
+    -- Mint stays out of the rotation so headings don't collide with `@variable`/`@property`.
     ["@markup.heading"] = { fg = c.cyan, bold = true },
     ["@markup.heading.1"] = { fg = c.cyan, bold = true },
-    ["@markup.heading.2"] = { fg = c.cyan, bold = true },
-    ["@markup.heading.3"] = { fg = c.cyan, bold = true },
-    ["@markup.heading.4"] = { fg = c.cyan, bold = true },
-    ["@markup.heading.5"] = { fg = c.cyan, bold = true },
-    ["@markup.heading.6"] = { fg = c.cyan, bold = true },
+    ["@markup.heading.2"] = { fg = c.blue, bold = true },
+    ["@markup.heading.3"] = { fg = c.lavender, bold = true },
+    ["@markup.heading.4"] = { fg = c.magenta, bold = true },
+    ["@markup.heading.5"] = { fg = c.pink, bold = true },
+    ["@markup.heading.6"] = { fg = c.peach, bold = true },
+    -- Markdown-specific aliases (some plugins use the .markdown suffix)
+    ["@markup.heading.1.markdown"] = { fg = c.cyan, bold = true },
+    ["@markup.heading.2.markdown"] = { fg = c.blue, bold = true },
+    ["@markup.heading.3.markdown"] = { fg = c.lavender, bold = true },
+    ["@markup.heading.4.markdown"] = { fg = c.magenta, bold = true },
+    ["@markup.heading.5.markdown"] = { fg = c.pink, bold = true },
+    ["@markup.heading.6.markdown"] = { fg = c.peach, bold = true },
 
     -- `markup.quote` → faded white
     ["@markup.quote"] = { fg = c.comment, italic = true },
@@ -158,11 +166,12 @@ function M.get(c, opts)
     ["@markup.list.unchecked"] = { fg = c.fg_muted },
 
     -----------------------------------------------------------
-    -- Diff (faithful to VSCode: inserted=peach, deleted=mint, changed=lavender)
+    -- Diff (conventional: green=added, red=removed, yellow=changed)
+    -- Matches the gitsigns / git decoration colors for consistency.
     -----------------------------------------------------------
-    ["@diff.plus"] = { fg = c.peach },
-    ["@diff.minus"] = { fg = c.mint },
-    ["@diff.delta"] = { fg = c.lavender },
+    ["@diff.plus"] = { fg = c.mint },
+    ["@diff.minus"] = { fg = c.pink },
+    ["@diff.delta"] = { fg = c.peach },
 
     -----------------------------------------------------------
     -- Tags (HTML / JSX / Astro / Vue / Svelte)

@@ -280,6 +280,44 @@ function M.get(c, _opts)
     MiniDiffSignDelete = { fg = c.git.deleted },
 
     -----------------------------------------------------------
+    -- render-markdown.nvim
+    -- Headings follow the same cool→warm walk as treesitter `@markup.heading.N`.
+    -- Background variants use a subtle tint of the same hue.
+    -----------------------------------------------------------
+    RenderMarkdownH1 = { fg = c.cyan, bold = true },
+    RenderMarkdownH2 = { fg = c.blue, bold = true },
+    RenderMarkdownH3 = { fg = c.lavender, bold = true },
+    RenderMarkdownH4 = { fg = c.magenta, bold = true },
+    RenderMarkdownH5 = { fg = c.pink, bold = true },
+    RenderMarkdownH6 = { fg = c.peach, bold = true },
+    RenderMarkdownH1Bg = { bg = c.bg_panel },
+    RenderMarkdownH2Bg = { bg = c.bg_panel },
+    RenderMarkdownH3Bg = { bg = c.bg_panel },
+    RenderMarkdownH4Bg = { bg = c.bg_panel },
+    RenderMarkdownH5Bg = { bg = c.bg_panel },
+    RenderMarkdownH6Bg = { bg = c.bg_panel },
+    RenderMarkdownCode = { bg = c.bg_panel },
+    RenderMarkdownCodeInline = { fg = c.peach, bg = c.bg_panel },
+    RenderMarkdownBullet = { fg = c.cyan },
+    RenderMarkdownDash = { fg = c.fg_muted },
+    RenderMarkdownQuote = { fg = c.comment, italic = true },
+    RenderMarkdownTableHead = { fg = c.cyan, bold = true },
+    RenderMarkdownTableRow = { fg = c.fg },
+    RenderMarkdownTableFill = { fg = c.fg_muted },
+    RenderMarkdownLink = { fg = c.blue, underline = true },
+    RenderMarkdownWikiLink = { fg = c.blue, underline = true },
+    RenderMarkdownChecked = { fg = c.mint },
+    RenderMarkdownUnchecked = { fg = c.fg_muted },
+    RenderMarkdownTodo = { fg = c.cyan, bold = true },
+    RenderMarkdownSign = { fg = c.fg_muted },
+    RenderMarkdownMath = { fg = c.cyan },
+    RenderMarkdownSuccess = { fg = c.mint },
+    RenderMarkdownInfo = { fg = c.blue },
+    RenderMarkdownHint = { fg = c.cyan },
+    RenderMarkdownWarn = { fg = c.peach },
+    RenderMarkdownError = { fg = c.red },
+
+    -----------------------------------------------------------
     -- lazy.nvim
     -----------------------------------------------------------
     LazyNormal = { fg = c.fg, bg = c.bg_float },
