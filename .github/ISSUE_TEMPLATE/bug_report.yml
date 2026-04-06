@@ -1,0 +1,85 @@
+name: Bug report
+description: Something looks wrong with the colorscheme
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file a report! Please fill out the
+        form below so the issue can be reproduced quickly.
+
+  - type: input
+    id: nvim-version
+    attributes:
+      label: Neovim version
+      description: Output of `nvim --version` (first line is enough)
+      placeholder: "NVIM v0.10.2"
+    validations:
+      required: true
+
+  - type: input
+    id: houston-version
+    attributes:
+      label: houston.nvim version
+      description: Tag, branch, or commit SHA
+      placeholder: "v0.1.0"
+    validations:
+      required: true
+
+  - type: input
+    id: plugin-manager
+    attributes:
+      label: Plugin manager
+      placeholder: "lazy.nvim"
+    validations:
+      required: true
+
+  - type: textarea
+    id: config
+    attributes:
+      label: Your houston.nvim config
+      description: The `setup()` call you use, if any
+      render: lua
+      placeholder: |
+        require("houston").setup({
+          italic_comments = false,
+        })
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What looks wrong?
+      description: Which highlight group, language, or plugin?
+      placeholder: "TypeScript `const` references appear in the wrong color"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      placeholder: "Lavender, matching the VSCode Houston theme"
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Drag an image here. A screenshot makes color issues 10x easier to triage.
+    validations:
+      required: false
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: |
+        A minimal code snippet that exhibits the issue, plus the language
+        and (if relevant) the LSP server you're using.
+      render: text
+    validations:
+      required: false

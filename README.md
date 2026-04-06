@@ -1,10 +1,35 @@
 # houston.nvim
 
+[![lint](https://github.com/devbydaniel/houston.nvim/actions/workflows/lint.yml/badge.svg)](https://github.com/devbydaniel/houston.nvim/actions/workflows/lint.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Latest Release](https://img.shields.io/github/v/release/devbydaniel/houston.nvim?display_name=tag&sort=semver)](https://github.com/devbydaniel/houston.nvim/releases)
+[![Neovim](https://img.shields.io/badge/Neovim-0.9+-57A143?logo=neovim&logoColor=white)](https://neovim.io)
+
 A Neovim port of the [Houston](https://github.com/withastro/houston-vscode)
 VSCode theme by [Astro](https://astro.build/).
 
-Pure Lua, no dependencies, treesitter + LSP semantic tokens, and a bundled
-lualine theme.
+Pure Lua, no dependencies, faithful translation of the original TextMate
+scope mappings, treesitter + LSP semantic tokens, and a bundled lualine
+theme. **1138 highlight groups** covering treesitter, LSP, and 25+ popular
+plugins out of the box.
+
+## Screenshots
+
+<!-- Drop preview images into ./screenshots/ and they'll show up here. -->
+
+<table>
+  <tr>
+    <td><img src="./screenshots/typescript.png" alt="TypeScript" /></td>
+    <td><img src="./screenshots/astro.png" alt="Astro" /></td>
+  </tr>
+  <tr>
+    <td><img src="./screenshots/lua.png" alt="Lua" /></td>
+    <td><img src="./screenshots/markdown.png" alt="Markdown" /></td>
+  </tr>
+  <tr>
+    <td colspan="2"><img src="./screenshots/picker.png" alt="snacks.picker" /></td>
+  </tr>
+</table>
 
 ## Palette
 

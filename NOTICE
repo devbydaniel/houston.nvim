@@ -1,0 +1,14 @@
+houston.nvim
+Copyright (c) 2026 Daniel Benner
+
+This Neovim colorscheme is a port of the Houston VSCode theme by
+The Astro Technology Company:
+
+  https://github.com/withastro/houston-vscode
+
+The original Houston VSCode theme is also MIT-licensed. The color palette
+and TextMate scope mappings used in this project are derived from
+themes/houston.json in that repository.
+
+A copy of the original theme JSON is included in extras/houston-vscode.json
+for reference.
